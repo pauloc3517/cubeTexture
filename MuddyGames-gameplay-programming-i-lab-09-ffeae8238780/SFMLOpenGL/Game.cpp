@@ -101,8 +101,8 @@ textureID,	//Texture ID
 texelID,// Texel ID
 mvpID;	//model view projection ID
 
-const std::string filename = "texture.tga";
-//const std::string filename = "cube.tga";
+//const std::string filename = "texture.tga";
+const std::string filename = "cube.tga";
 
 //const std::string filename = "minecraft.tga";
 
@@ -138,7 +138,7 @@ void Game::initialize()
 		{
 			vertex[i].coordinate[c] = vertices[i * 3 + c];
 			std::cout << vertex[i].coordinate[c] << std::endl;
-			vertex[i].color[c] = (((c+1)* (0.1 +i))/100.0f);
+			//vertex[i].color[c] = (((c+1)* (0.1 +i))/100.0f);
 
 
 		}
@@ -148,23 +148,144 @@ void Game::initialize()
 	int i = 0;
 	while (i < 36)
 	{
-		vertex[i].texel[0] = 0.5f;
-		vertex[i].texel[1] = 0.5f;
+		//purple
 
-		vertex[i + 1].texel[0] = 1.0f;
-		vertex[i + 1].texel[1] = 1.0f;
+		if (i < 6)
+		{
+			//first
+			vertex[i].texel[0] = 0.25f;
+			vertex[i].texel[1] = 0.25f;
 
-		vertex[i + 2].texel[0] = 1.0f;
-		vertex[i + 2].texel[1] = 0.0f;
+			//second blue
+			vertex[i + 1].texel[0] = 0.25f;
+			vertex[i + 1].texel[1] = 0.25f;
+			//third yello
+			vertex[i + 2].texel[0] = 0.25f;
+			vertex[i + 2].texel[1] = 0.25f;
+			//fourth green
+			vertex[i + 3].texel[0] = 0.25f;
+			vertex[i + 3].texel[1] = 0.25f;
+			//fifth
+			vertex[i + 4].texel[0] = 0.25f;
+			vertex[i + 4].texel[1] = 0.25f;
+			//6th
+			vertex[i + 5].texel[0] = 0.25f;
+			vertex[i + 5].texel[1] = 0.25f;
+		}
 
-		vertex[i + 3].texel[0] = 0.0f;
-		vertex[i + 3].texel[1] = 1.0f;
+		//blue
+		else if (i < 12)
+		{
+			//first
+			vertex[i].texel[0] = 0.25f;
+			vertex[i].texel[1] = 0.3f;
 
-		vertex[i + 4].texel[0] = 0.0f;
-		vertex[i + 4].texel[1] = 0.0f;
+			//second b
+			vertex[i + 1].texel[0] = 0.25f;
+			vertex[i + 1].texel[1] = 0.3f;
+			//third yello
+			vertex[i + 2].texel[0] = 0.25f;
+			vertex[i + 2].texel[1] = 0.3f;
+			//fourth green
+			vertex[i + 3].texel[0] = 0.25f;
+			vertex[i + 3].texel[1] = 0.3f;
+			//fifth
+			vertex[i + 4].texel[0] = 0.25f;
+			vertex[i + 4].texel[1] = 0.3f;
+			//6th
+			vertex[i + 5].texel[0] = 0.25f;
+			vertex[i + 5].texel[1] = 0.3f;
+		}
 
-		vertex[i + 5].texel[0] = 0.5f;
-		vertex[i + 5].texel[1] = 0.0;
+		else if (i < 18)
+		{
+			//first
+			vertex[i].texel[0] = 0.51f;
+			vertex[i].texel[1] = 0.3f;
+
+			//second blue
+			vertex[i + 1].texel[0] = 0.51f;
+			vertex[i + 1].texel[1] = 0.3f;
+			//third yello
+			vertex[i + 2].texel[0] = 0.51f;
+			vertex[i + 2].texel[1] = 0.3f;
+			//fourth green
+			vertex[i + 3].texel[0] = 0.51f;
+			vertex[i + 3].texel[1] = 0.3f;
+			//fifth
+			vertex[i + 4].texel[0] = 0.51f;
+			vertex[i + 4].texel[1] = 0.3f;
+			//6th
+			vertex[i + 5].texel[0] = 0.51f;
+			vertex[i + 5].texel[1] = 0.3f;
+		}
+		else if (i < 24)
+			{
+				//first
+				vertex[i].texel[0] = 0.765f;
+				vertex[i].texel[1] = 0.3f;
+
+				//second blue
+				vertex[i + 1].texel[0] = 0.765f;
+				vertex[i + 1].texel[1] = 0.3f;
+				//third yello
+				vertex[i + 2].texel[0] = 0.765f;
+				vertex[i + 2].texel[1] = 0.3f;
+				//fourth green
+				vertex[i + 3].texel[0] = 0.765f;
+				vertex[i + 3].texel[1] = 0.3f;
+				//fifth
+				vertex[i + 4].texel[0] = 0.765f;
+				vertex[i + 4].texel[1] = 0.3f;
+				//6th
+				vertex[i + 5].texel[0] = 0.765f;
+				vertex[i + 5].texel[1] = 0.3f;
+			}
+		else if (i < 30)
+			{
+				//first
+				vertex[i].texel[0] = 0.49f;
+				vertex[i].texel[1] = 0.24f;
+
+				//second blue
+				vertex[i + 1].texel[0] = 0.49f;
+				vertex[i + 1].texel[1] = 0.24f;
+				//third yello
+				vertex[i + 2].texel[0] = 0.49f;
+				vertex[i + 2].texel[1] = 0.24f;
+				//fourth green
+				vertex[i + 3].texel[0] = 0.49f;
+				vertex[i + 3].texel[1] = 0.24f;
+				//fifth
+				vertex[i + 4].texel[0] = 0.49f;
+				vertex[i + 4].texel[1] = 0.24f;
+				//6th
+				vertex[i + 5].texel[0] = 0.49f;
+				vertex[i + 5].texel[1] = 0.24f;
+			}
+		else
+			{
+				//first
+				vertex[i].texel[0] = 0.01f;
+				vertex[i].texel[1] = 0.49f;
+
+				//second blue
+				vertex[i + 1].texel[0] = 0.01f;
+				vertex[i + 1].texel[1] = 0.49f;
+				//third yello
+				vertex[i + 2].texel[0] = 0.01f;
+				vertex[i + 2].texel[1] = 0.49f;
+				//fourth green
+				vertex[i + 3].texel[0] = 0.01f;
+				vertex[i + 3].texel[1] = 0.49f;
+				//fifth
+				vertex[i + 4].texel[0] = 0.01f;
+				vertex[i + 4].texel[1] = 0.49f;
+				//6th
+				vertex[i + 5].texel[0] = 0.01f;
+				vertex[i + 5].texel[1] = 0.49f;
+			}
+
 
 		i += 6;
 	}
@@ -363,8 +484,8 @@ void Game::update()
 		for (int i = 0; i < 36; i++)
 		{
 
-			vertex[i].texel[0] -= 0.0005f;
-			vertex[i].texel[1] -= 0.0005f;
+			vertex[i].texel[0] -= 0.005f;
+			std::cout << "Texel 0 Vertex: " << i << " is value " << vertex[i].texel[0] << std::endl;
 		}
 	}
 	else if(sf::Keyboard::isKeyPressed(sf::Keyboard::L))
@@ -372,10 +493,30 @@ void Game::update()
 		for (int i = 0; i < 36; i++)
 		{
 
-			vertex[i].texel[0] += 0.0005f;
-			vertex[i].texel[1] += 0.0005f;
+			vertex[i].texel[0] += 0.005f;
+			std::cout << "Texel 0 Vertex: " << i << " is value " << vertex[i].texel[0] << std::endl;
 		}
 	}
+
+	if (sf::Keyboard::isKeyPressed(sf::Keyboard::O))
+	{
+		for (int i = 0; i < 36; i++)
+		{
+
+			vertex[i].texel[1] -= 0.005f;
+			std::cout << "Texel 1 Vertex: " << i << " is value " << vertex[i].texel[1] << std::endl;
+		}
+	}
+	else if (sf::Keyboard::isKeyPressed(sf::Keyboard::P))
+	{
+		for (int i = 0; i < 36; i++)
+		{
+
+			vertex[i].texel[1] += 0.005f;
+			std::cout << "Texel 1 Vertex: " << i << " is value " << vertex[i].texel[1] << std::endl;
+		}
+	}
+
 
 	//reset
 	if (sf::Keyboard::isKeyPressed(sf::Keyboard::Q))
